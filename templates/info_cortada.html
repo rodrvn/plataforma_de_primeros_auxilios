@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Caso:Cortada</title>
+</head>
+<body>
+
+  
+  <!-- #################### ENCABEZADO ########################### -->
+  <header>
+    <nav class="border-b">
+      <div x-data="{showMenu : false}" class="container relative max-w-screen-lg mx-auto flex justify-between h-14">
+            
+            <a href="/" class="flex items-center cursor-pointer hover:bg-purple-50 px-2 ml-3">
+                
+                <div class="rounded bg-[#E37E6F] text-white font-bold w-15 h-15 flex justify-center text-3xl pt-0.5">PRAUX</div>
+                <div class="text-gray-700 font-semibold ml-2">Primeros Auxilios</div>
+            </a>
+            
+            <button @click="showMenu = !showMenu" class="block md:hidden text-gray-700 p-2 rounded hover:border focus:border focus:bg-gray-100 my-2 mr-5" type="button" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            
+            <ul class="md:flex text-gray-700 text-base mr-3 origin-top z-10" :class="{ 'block absolute top-14 border-b bg-white w-full p-2': showMenu, 'hidden': !showMenu}" id="navbar-main" x-cloak="">
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/subir_imagen">SOS</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/nuevousuario">Registro</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="#">Login</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/vayavaya">About</a>
+                </li>
+            </ul>
+      </div>
+    </nav>
+  </header>
+    <!-- #################### TERMINA EL ENCABEZADO ########################### -->
+
+
+
+  <div class="mx-auto w-1/2 rounded shadow-lg border overflow-hidden mt-5 bg-white">
+    <div class="relative pb-[60%]">
+      <img src="static/cortada.jpg" class="absolute object-cover h-full w-full rounded-lg">
+    </div>
+    <div class="p-4 text-sm font-medium text-gray-700">
+      
+      <h1 class=" text-lg font-bold text-center">Pasos a seguir para los primeros auxilios</h1>
+      <br>
+
+      <h3 class=""> - Lávate las manos. Esto ayuda a evitar infecciones. <br>
+        <br>
+      <h2 class='font-semibold'>1</h2>Detén el sangrado. En el caso de los cortes y rasguños menores, por lo general, el sangrado se detiene solo. Si es necesario, aplica presión suave con una venda o paño limpios y eleva la herida hasta que se detenga el sangrado. <br>
+      <br>
+      
+      <h2 class='font-semibold'>2</h2>Limpia la herida. Lava la herida con agua. Mantener la herida debajo del agua corriente del grifo disminuirá el riesgo de tener una infección. Lava con jabón la zona que rodea la herida. Evita que entre jabón en la herida. Además, no utilices agua oxigenada ni yodo, que pueden irritar. Quita cualquier suciedad o restos con pinzas previamente limpiadas con alcohol. Consulta con el médico si no puedes quitar todos los restos. <br>
+        <br>
+      <h2 class='font-semibold'>3</h2>Aplica un antibiótico o vaselina. Aplica una capa fina de ungüento antibiótico o vaselina para mantener húmeda la superficie y ayudar a evitar la formación de cicatrices. En algunas personas, determinados ingredientes que se encuentran en algunos ungüentos pueden causar una erupción cutánea leve. Si aparece una erupción, suspende el uso del ungüento. <br>
+        <br>
+      <h2 class='font-semibold'>4</h2>Tapa la herida. Coloca un vendaje, una gasa enrollada o una gasa sostenida en el lugar con cinta de papel. Cubrir la herida la mantiene limpia. Si la herida solo es un rasguño menor o una raspadura, no la cubras. <br>
+        <br>
+      <h2 class='font-semibold'>5</h2>ambia el apósito. Cámbialo al menos una vez al día o siempre que el vendaje se moje o se ensucie. <br>
+        <br>
+      <h2 class='font-semibold'>6</h2>Vacúnate contra el tétanos. Vacúnate contra el tétanos si no lo has hecho en los últimos cinco años y la herida es profunda o está sucia. <br>
+        <br>
+      <h2 class='font-semibold'>7</h2>Busca signos de infección. Consulta con el médico si observas signos de infección en la piel o cerca de la herida, como enrojecimiento, mayor dolor, drenaje, calor o hinchazón. <br>
+        <br></h3>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Uuppss</title>
+</head>
+<body>
+
+  <!-- #################### ENCABEZADO ########################### -->
+  <header>
+    <nav class="border-b">
+      <div x-data="{showMenu : false}" class="container relative max-w-screen-lg mx-auto flex justify-between h-14">
+            
+            <a href="/" class="flex items-center cursor-pointer hover:bg-purple-50 px-2 ml-3">
+                
+                <div class="rounded bg-[#E37E6F] text-white font-bold w-17 h-17 flex justify-center text-3xl pt-0.5">PRAUX</div>
+                <div class="text-gray-700 font-semibold ml-2">Primeros Auxilios</div>
+            </a>
+            
+            <button @click="showMenu = !showMenu" class="block md:hidden text-gray-700 p-2 rounded hover:border focus:border focus:bg-gray-100 my-2 mr-5" type="button" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            
+            <ul class="md:flex text-gray-700 text-base mr-3 origin-top z-10" :class="{ 'block absolute top-14 border-b bg-white w-full p-2': showMenu, 'hidden': !showMenu}" id="navbar-main" x-cloak="">
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/subir_imagen">SOS</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/registro">Registro</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="#">Login</a>
+                </li>
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu &amp;&amp; 'py-1'">
+                    <a href="/vayavaya">About</a>
+                </li>
+            </ul>
+      </div>
+    </nav>
+  </header>
+    <!-- #################### TERMINA EL ENCABEZADO ########################### -->
+
+
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900">Upss...<br>No se han encontrado casos parecidos :( </h2>
+      <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+        <a href="/subir_imagen" class="rounded-md bg-[#E37E6F] px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:[#db4e39] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#db4e39]">Probar otra vez</a>
+        <a href="tel:911" class="text-base font-semibold leading-7 text-gray-900"> Llama al 911 <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
